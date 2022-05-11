@@ -7,7 +7,11 @@
 </template>
 
 <script>
+    // import mixins from '@/mixins'
+
     export default {
+
+        // mixins : [mixins],
 
         data : ()=> ({
             today : new Date()

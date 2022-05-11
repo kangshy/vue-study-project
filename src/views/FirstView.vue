@@ -7,7 +7,11 @@
 </template>
 
 <script>
+    // import mixins from '@/mixins'
+
     export default {
+
+        // mixins : [mixins],
 
         data : () => ({
             yesterday : new Date(new Date().getTime() - 1000 * 60 * 60 * 24)
