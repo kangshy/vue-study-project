@@ -1,15 +1,8 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/sync">Sync</router-link> |
-      <router-link to="/async">Async</router-link> |
-      <router-link to="/promise">Promise</router-link> |
-      <router-link to="/async-await">async & await</router-link> |
-      <router-link to="/axios">axios</router-link> |
-      <router-link to="/sign-up">signUp</router-link> |
-      <router-link to="/login">login</router-link> |
-      <router-link to="/delete-user">delete-user</router-link> 
+      <router-link to="/first">first</router-link> |
+      <router-link to="/second">second</router-link>
     </nav>
     <router-view/>
   </div>

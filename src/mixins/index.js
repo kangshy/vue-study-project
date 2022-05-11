@@ -1,27 +1,14 @@
-import axios from "axios";
-
 export default {
 
-    methods : {
-        async $api(url, method, data, token, errorCallback) {
-
-            return axios({
-                headers: {
-                    Authorization: `Bearer ${token}`
-                },
-                method: method
-                , url
-                , data
-            }).catch(e => {
-                if(errorCallback){
-                    errorCallback(e.response);
-                } else if(e.response?.data?.error){
-                    alert(e.response.data.error);
-                } else {
-                    console.error(e);
-                }
-            });
-            
+    filters : {
+        t2f(dateObj){
+            const year = String(dateObj.getFullYear());
+            const month = String(dateObj.getMonth() + 1).padStart(2,0);
+            const date = String(dateObj.getDate()).padStart(2,0);
+            const hour = String(dateObj.getHours()).padStart(2,0);
+            const minute = String(dateObj.getMinutes()).padStart(2,0);
+            const second = String(dateObj.getSeconds()).padStart(2,0);
+            return `${year}-${month}-${date} ${hour}:${minute}:${second}`;
         }
     }
 
